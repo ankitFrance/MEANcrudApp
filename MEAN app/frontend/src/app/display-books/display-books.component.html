@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-dark table-bordered" style="width: 100%; border-collapse: collapse;">
+        <thead>
+          <tr>
+            <th style="text-align: center; padding: 15px;">ID</th>
+            <th style="text-align: center; padding: 15px;">Name</th>
+            <th style="text-align: center; padding: 15px;">Subject</th>
+            <th style="text-align: center; padding: 15px;">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of books">
+            <td style="text-align: center; padding: 10px;">{{ book._id }}</td>
+            <td style="text-align: center; padding: 10px;">{{ book.name }}</td>
+            <td style="text-align: center; padding: 10px;">{{ book.subject }}</td>
+            <td style="text-align: center; padding: 10px;">
+              <button class="btn btn-primary btn-sm" style="background-color: #007bff; border: none; color: white; padding: 5px 10px; border-radius: 3px; cursor: pointer;" (click)="updateBook(book)">
+                Update
+              </button>
+              <button class="btn btn-danger btn-sm" style="background-color: #dc3545; border: none; color: white; padding: 5px 10px; border-radius: 3px; cursor: pointer; margin-left: 5px;" (click)="deleteBook(book._id)">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
