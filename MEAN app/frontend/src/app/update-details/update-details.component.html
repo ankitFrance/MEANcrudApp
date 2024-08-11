@@ -1,6 +1,9 @@
 
 
 <div class="container" style="color: rgb(255, 255, 255); background-color: rgb(4, 4, 41); padding-top: 40px; padding-bottom: 40px; margin-top: 50px;">
+  <div class="alert alert-info" role="alert" *ngIf="updateMessage">
+    {{ updateMessage }}
+  </div>
   <h2 style="text-align: center;">Update the Book</h2>
   <form (ngSubmit)="onSubmitUpdateForm(updateBookForm, bookDetails._id)" #updateBookForm="ngForm">
     <div class="mb-3">

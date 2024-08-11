@@ -20,6 +20,7 @@ export class DisplayBooksComponent implements OnInit {
   books: any[] = [];
   private apiUrlForDelete = 'http://localhost:8082/delete';
   private apiUrlForUpdate = 'http://localhost:8082/update';
+  deleteMessage : string  | null = null;
   
  
   constructor(private bookService: BookServiceService, private http : HttpClient,  private router: Router ) {}
@@ -49,6 +50,8 @@ export class DisplayBooksComponent implements OnInit {
       try {
         await this.http.post(this.apiUrlForDelete, body, { headers }).toPromise();
         console.log('Book deleted successfully yessssss');
+        this.deleteMessage = 'Book deleted successfully!';
+        setTimeout(() => this.deleteMessage = null, 2000);  // Hide after 5 seconds
         this.loadBooks()
       } catch (error) {
         console.error('Error deleting book', error);
