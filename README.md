@@ -1,13 +1,13 @@
 In this project we have to run two terminals 
 
-STEP 1. In the first terminal of vs code 
+#STEP 1. In the first terminal of vs code 
 
 
- # cd backend  (to reach the directory)
- # npm run dev 
+  1. cd backend  (to reach the directory)
+  2. npm run dev 
 
-STEP 2. In the another terminal of vs code 
+#STEP 2. In the another terminal of vs code 
 
 
- # cd frontend  (to reach the directory)
- # ng serve
+ 1.  cd frontend  (to reach the directory)
+ 2.  ng serve
